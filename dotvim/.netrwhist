@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/ivasara/Work/rewportal'
+let g:netrw_dirhist_2='/Users/ivasara/Work/notes'
+let g:netrw_dirhist_3='/Users/ivasara/Work/rewportal'
+let g:netrw_dirhist_4='/Users/ivasara/Work/rewportal/db/migrate'
+let g:netrw_dirhist_5='/Users/ivasara/Work/rewportal'
+let g:netrw_dirhist_6='/Users/ivasara/Work/cav_rew_portal'
+let g:netrw_dirhist_7='/Users/ivasara/Work/rewportal'
