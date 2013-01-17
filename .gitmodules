@@ -70,3 +70,9 @@
 [submodule "dotvim/bundle/ruby_focused_unit_test_vim"]
 	path = dotvim/bundle/ruby_focused_unit_test_vim
 	url = git://github.com/drewolson/ruby_focused_unit_test_vim.git
+[submodule "dotvim/bundle/vim-coffee-script"]
+	path = dotvim/bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "dotvim/bundle/bufexplorer"]
+	path = dotvim/bundle/bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
