@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/ivasara/Work/rewportal'
-let g:netrw_dirhist_2='/Users/ivasara/Work/librets-gem'
+let g:netrw_dirhist_2='/Users/ivasara/Work/rewportal/lib/tasks'
 let g:netrw_dirhist_3='/Users/ivasara/Work/rewportal'
-let g:netrw_dirhist_4='/Users/ivasara/Work/CAV/cav_rew_portal'
-let g:netrw_dirhist_5='/Users/ivasara/Work/rewportal'
-let g:netrw_dirhist_6='/Users/ivasara/Work/point2-dataloader'
-let g:netrw_dirhist_7='/Users/ivasara/Work/sax-machine'
-let g:netrw_dirhist_8='/Users/ivasara/Work/rewportal'
+let g:netrw_dirhist_4='/Users/ivasara/Work/rew_rets_importer'
+let g:netrw_dirhist_5='/Users/ivasara/Work/CAV/legacy_cav_backup/cav_rew_portal'
