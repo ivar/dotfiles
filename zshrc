@@ -8,7 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="gentoo"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -30,17 +31,14 @@ export EDITOR=vim
 alias b='bundle exec'
 alias vim='nocorrect vim'
 alias heroky='heroku'
-alias reset_db='rake db:drop; rake db:create; cat tmp/20121119175901_rewportal_production.sql | mysql -u root -p rewportal_development ; rake db:migrate'
+alias virb='virb-pry'
+alias rpry="rails-console-pry -r pry-doc -r awesome_print"
 
 source $ZSH/oh-my-zsh.sh
 
-# custom REW settings
-export SKIP_NATIVE_LIBRARIES=1
-export REW_PORTAL_HOME=/Users/ivasara/Work/rewportal
-#export LEGACY_DB_URI='mysql2://cav_import:AfkNyw8rfV8YUutkCZFozeJH@van-cloud2-1573-1.ezp.net/cav_rewportal'
-export LEGACY_DB_URI='mysql2://root:@127.0.0.1/cav_rewportal'
+#export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current/Home
 
 ## Customize to your needs...
-export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH
 
 eval "$(rbenv init -)"

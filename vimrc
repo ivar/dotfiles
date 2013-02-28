@@ -2,7 +2,6 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-
 " =============== Pathogen Initialization ===============
 " This loads all the plugins in ~/.vim/bundle
 " Use tpope's pathogen plugin to manage all other plugins
@@ -103,7 +102,7 @@ set sidescroll=1
 
 " ============== NerdTree ================
 "open a NERDTree automatically when vim starts up if no files were specified
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -111,3 +110,55 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+:nmap <Leader>e :NERDTreeToggle<CR>
+:nmap <Leader>f :NERDTreeFind<CR>
+
+"true if is NERDTree open/active
+function! rc:isNTOpen()
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+  function! s:toggle(dir)
+      if s:treeExistsForTab()
+          if !s:isTreeOpen()
+              call s:createTreeWin()
+              if !&hidden
+                  call s:renderView()
+              endif
+              call s:restoreScreenState()
+          else
+              call s:closeTree()
+          endif
+      else
+          call s:initNerdTree(a:dir)
+      endif
+  endfunction
+
+"provide access to t:NerdTreeBufName (bring into scope)
+function! s:treeExistsForTab()
+    return exists("t:NERDTreeBufName")
+endfunction
+
+function! NERDTreeToggleFind()
+   if exists('t:NERDTreeToggle')
+     call NERDTreeClose()
+   else
+     call NERDTreeFind(a:dir)
+   endif
+endfunction
+
+
+:nmap <Leader>p  call iv:NERDTreeToggleFind<CR>
+
+"set ex movement to be like emacs
+:cnoremap <C-a>  <Home>
+:cnoremap <C-b>  <Left>
+:cnoremap <C-f>  <Right>
+:cnoremap <C-d>  <Delete>
+:cnoremap <M-b>  <S-Left>
+:cnoremap <M-f>  <S-Right>
+:cnoremap <M-d>  <S-right><Delete>
+:cnoremap <Esc>b <S-Left>
+:cnoremap <Esc>f <S-Right>
+:cnoremap <Esc>d <S-right><Delete>
+:cnoremap <C-g>  <C-c>
