@@ -102,10 +102,12 @@ set sidescroll=1
 
 " ============== NerdTree ================
 "open a NERDTree automatically when vim starts up if no files were specified
-"autocmd vimenter * if !argc() | NERDTree | endif
+autocmd vimenter * if !argc() | NERDTree | endif
 
 "Close NerdTree when a file is selected
 let NERDTreeQuitOnOpen=1
+:nmap <Leader>e :NERDTreeToggle<CR>
+:nmap <Leader>f :NERDTreeFind<CR>
 
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -113,9 +115,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-:nmap <Leader>e :NERDTreeToggle<CR>
-:nmap <Leader>f :NERDTreeFind<CR>
-"
+:nmap <Leader>g :GitGutterToggle<CR>
+
 "set ex movement to be like emacs
 :cnoremap <C-a>  <Home>
 :cnoremap <C-b>  <Left>
