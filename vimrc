@@ -104,6 +104,9 @@ set sidescroll=1
 "open a NERDTree automatically when vim starts up if no files were specified
 "autocmd vimenter * if !argc() | NERDTree | endif
 
+"Close NerdTree when a file is selected
+let NERDTreeQuitOnOpen=1
+
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -112,44 +115,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 :nmap <Leader>e :NERDTreeToggle<CR>
 :nmap <Leader>f :NERDTreeFind<CR>
-
-"true if is NERDTree open/active
-function! rc:isNTOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-  function! s:toggle(dir)
-      if s:treeExistsForTab()
-          if !s:isTreeOpen()
-              call s:createTreeWin()
-              if !&hidden
-                  call s:renderView()
-              endif
-              call s:restoreScreenState()
-          else
-              call s:closeTree()
-          endif
-      else
-          call s:initNerdTree(a:dir)
-      endif
-  endfunction
-
-"provide access to t:NerdTreeBufName (bring into scope)
-function! s:treeExistsForTab()
-    return exists("t:NERDTreeBufName")
-endfunction
-
-function! NERDTreeToggleFind()
-   if exists('t:NERDTreeToggle')
-     call NERDTreeClose()
-   else
-     call NERDTreeFind(a:dir)
-   endif
-endfunction
-
-
-:nmap <Leader>p  call iv:NERDTreeToggleFind<CR>
-
+"
 "set ex movement to be like emacs
 :cnoremap <C-a>  <Home>
 :cnoremap <C-b>  <Left>

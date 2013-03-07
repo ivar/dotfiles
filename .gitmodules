@@ -76,3 +76,6 @@
 [submodule "dotvim/bundle/bufexplorer"]
 	path = dotvim/bundle/bufexplorer
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "dotvim/bundle/vim-gitgutter"]
+	path = dotvim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
