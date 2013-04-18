@@ -10,3 +10,12 @@
 ## to update all plugins
 ```git submodule foreach git pull origin master```
 
+## to add new bundle
+```git submodule add git@mygithost:billboard dotvim/bundle/```
+
+
+### Vim colourschemes
+
+distinguished
+grb256
+solarized
