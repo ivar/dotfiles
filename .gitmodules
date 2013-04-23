@@ -85,3 +85,6 @@
 [submodule "dotvim/bundle/vim-colors-solarized"]
 	path = dotvim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "dotvim/bundle/ag-vim"]
+	path = dotvim/bundle/ag-vim
+	url = git://github.com/rking/ag.vim.git
