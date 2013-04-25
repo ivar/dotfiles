@@ -88,3 +88,6 @@
 [submodule "dotvim/bundle/ag-vim"]
 	path = dotvim/bundle/ag-vim
 	url = git://github.com/rking/ag.vim.git
+[submodule "dotvim/bundle/tabluar"]
+	path = dotvim/bundle/tabluar
+	url = git://github.com/godlygeek/tabular.git
