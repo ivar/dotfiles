@@ -113,10 +113,15 @@ let NERDTreeQuitOnOpen=1
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+
+" ============ Misc =================
 "delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
 :nmap <Leader>g :GitGutterToggle<CR>
+
+" spell checking and automatic wrapping at 72 columns to commit messages.
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 "set ex movement to be like emacs
 :cnoremap <C-a>  <Home>

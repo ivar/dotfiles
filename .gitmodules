@@ -91,3 +91,9 @@
 [submodule "dotvim/bundle/tabluar"]
 	path = dotvim/bundle/tabluar
 	url = git://github.com/godlygeek/tabular.git
+[submodule "dotvim/bundle/vim-colors-detailed"]
+	path = dotvim/bundle/vim-colors-detailed
+	url = git://github.com/rking/vim-detailed.git
+[submodule "dotvim/bundle/vim-bundler"]
+	path = dotvim/bundle/vim-bundler
+	url = git://github.com/tpope/vim-bundler.git
