@@ -97,3 +97,6 @@
 [submodule "dotvim/bundle/vim-bundler"]
 	path = dotvim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "dotvim/bundle/RelOps"]
+	path = dotvim/bundle/RelOps
+	url = git@github.com:vim-scripts/RelOps.git
