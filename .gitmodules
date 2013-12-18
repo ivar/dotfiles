@@ -100,3 +100,15 @@
 [submodule "dotvim/bundle/RelOps"]
 	path = dotvim/bundle/RelOps
 	url = git@github.com:vim-scripts/RelOps.git
+[submodule "dotvim/bundle/tabular"]
+	path = dotvim/bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "dotvim/bundle/vim-snippets"]
+	path = dotvim/bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
+[submodule "dotvim/bundle/vim-abolish"]
+	path = dotvim/bundle/vim-abolish
+	url = git@github.com:tpope/vim-abolish.git
+[submodule "dotvim/bundle/vim-repeat"]
+	path = dotvim/bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
