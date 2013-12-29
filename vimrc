@@ -100,6 +100,7 @@ set sidescroll=1
 
 " =========== Buffer Management =====================
 " see umimpaired.vim ( https://github.com/tpope/vim-unimpaired )
+set splitright "splits windows to right by default
 
 " ============== NerdTree ================
 "open a NERDTree automatically when vim starts up if no files were specified
