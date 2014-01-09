@@ -112,3 +112,6 @@
 [submodule "dotvim/bundle/vim-repeat"]
 	path = dotvim/bundle/vim-repeat
 	url = git@github.com:tpope/vim-repeat.git
+[submodule "dotvim/bundle/jedi-vim"]
+	path = dotvim/bundle/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
