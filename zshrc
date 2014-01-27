@@ -17,6 +17,7 @@ ZSH_THEME="gentoo"
 export GNUTERM=x11 #for Octave and x11
 
 DISABLE_AUTO_UPDATE="true"
+
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
@@ -39,6 +40,7 @@ alias vim='nocorrect vim'
 alias heroky='heroku'
 alias virb='virb-pry'
 alias rpry="rails-console-pry -r pry-doc -r awesome_print"
+alias ruby_http='ruby -run -e httpd . -p 8080'
 
 source $ZSH/oh-my-zsh.sh
 
