@@ -27,13 +27,13 @@
 	url = git://github.com/Raimondi/delimitMate.git
 [submodule "dotvim/bundle/tlib_vim"]
 	path = dotvim/bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
+	url = git://github.com/tomtom/tlib_vim.git
 [submodule "dotvim/bundle/snipmate-snippets"]
 	path = dotvim/bundle/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets.git
+	url = git://github.com/honza/snipmate-snippets.git
 [submodule "dotvim/bundle/vim-addon-mw-utils"]
 	path = dotvim/bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "dotvim/bundle/vim-snipmate"]
 	path = dotvim/bundle/vim-snipmate
 	url = git://github.com/garbas/vim-snipmate.git
@@ -48,7 +48,7 @@
 	url = git://github.com/scrooloose/syntastic.git
 [submodule "dotvim/bundle/vim-matchit"]
 	path = dotvim/bundle/vim-matchit
-	url = https://github.com/tsaleh/vim-matchit
+	url = git://github.com/edsono/vim-matchit
 [submodule "dotvim/bundle/vim-ruby"]
 	path = dotvim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
@@ -115,3 +115,6 @@
 [submodule "dotvim/bundle/jedi-vim"]
 	path = dotvim/bundle/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
+[submodule "dotvim/bundle/rainbow_parentheses"]
+	path = dotvim/bundle/rainbow_parentheses
+	url = git@github.com:kien/rainbow_parentheses.vim.git
