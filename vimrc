@@ -38,6 +38,10 @@ set viminfo='100,f1  "Save up to 100 marks, enable capital marks
 "Silence search highlights
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
+" ===== Command-T Settings ==================
+
+let g:CommandTWildIgnore=&wildignore . ",public/assets/*,vendor/bundle/*,coverage/assets/*,*.png,*.gif,*.ico"
+
 " ================ Turn Off Swap Files ==============
 
 set noswapfile
