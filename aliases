@@ -1,6 +1,5 @@
 alias b='bundle exec'
 alias heroky='heroku'
-alias reset_db='rake db:drop; rake db:create; cat tmp/20121119175901_rewportal_production.sql | mysql -u root -p rewportal_development ; rake db:migrate'
 alias ll='tree --dirsfirst -ChFupDaLg 1'
 alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias ethip="ipconfig getifaddr en0"

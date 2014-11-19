@@ -125,6 +125,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 :nmap <Leader>g :GitGutterToggle<CR>
 
+"us Ag instead of ack -> https://github.com/ggreer/the_silver_searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " spell checking and automatic wrapping at 72 columns to commit messages.
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
