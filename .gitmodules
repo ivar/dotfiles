@@ -115,3 +115,6 @@
 [submodule "dotvim/bundle/rainbow_parentheses"]
 	path = dotvim/bundle/rainbow_parentheses
 	url = git@github.com:kien/rainbow_parentheses.vim.git
+[submodule "dotvim/bundle/vim-matchit"]
+	path = dotvim/bundle/vim-matchit
+	url = git@github.com:edsono/vim-matchit.git
