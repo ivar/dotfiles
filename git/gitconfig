@@ -128,6 +128,7 @@
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
-  enabled = true
+	enabled = true
+	autoupdate = true
 [include]
   path = .gitconfig.user
