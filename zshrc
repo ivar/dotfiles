@@ -1,8 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-
-# NOTE - handy cli tips at http://rubytune.com/cheat
+# NOTE - handy devopsy cli tips at http://rubytune.com/cheat
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,50 +10,85 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="gentoo"
 
-# Set to this to use case-sensitive completion
+
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-export GNUTERM=x11 #for Octave and x11
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
+# Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-alias -s md=mark
-alias -s marked=mark
-alias -s log='tail -n 100'
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rake fasd history history-substring-search git vi-mode)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git rails zsh-completions)
 
-export EDITOR=vim
+autoload -U compinit && compinit
 
-alias b='bundle exec'
-alias vim='nocorrect vim'
-alias heroky='heroku'
-alias virb='virb-pry'
-alias rpry="rails-console-pry -r pry-doc -r awesome_print"
-alias ruby_http='ruby -run -e httpd . -p 8080'
+# User configuration
 
 source $ZSH/oh-my-zsh.sh
 
-#http://superuser.com/questions/197813/cycle-through-matches-in-zsh-history-incremental-pattern-search-backward
-#TODO: check to see if this conflicts with oh-my-zsh plugins..
-bindkey "^R" history-incremental-pattern-search-backward
-#Search backwards and forwards with a pattern
-bindkey -M vicmd '/' history-incremental-pattern-search-backward
-bindkey -M vicmd '?' history-incremental-pattern-search-forward
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# set up for insert mode too
-bindkey -M viins '^R' history-incremental-pattern-search-backward
-bindkey -M viins '^F' history-incremental-pattern-search-forward
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH:./bin
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Warning - the below path includes a potential security hazard in that it
+# includes './bin'
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin
+
+# Use rbenv to manage ruby versions
 eval "$(rbenv init -)"
