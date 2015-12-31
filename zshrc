@@ -86,6 +86,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# import alias file
+. $HOME/.aliases
+
 # Warning - the below path includes a potential security hazard in that it
 # includes './bin'
 export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin
