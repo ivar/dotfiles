@@ -11,6 +11,8 @@
   frag = magenta bold
   old = red
   new = green
+[credential]
+	helper = osxkeychain
 [alias]
   # add
   a = add                           # add
@@ -53,12 +55,6 @@
   changelog = log --pretty=format:\" * %s\"
   shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
   hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
-
-  # pull
-  pl = pull                         # pull
-
-  # push
-  ps = push                         # push
 
   # rebase
   rc = rebase --continue            # continue rebase
