@@ -24,33 +24,8 @@ create a `~/.gitconfig.user` file that looks like:
 
 ## Zsh / Oh-my-zsh
 1. install zsh (`brew install zsh`)
-2. [install oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh#basic-installation)
-3. `ln ~/.dotfiles/zshrc .zshrc`
+2. install zprezto
 
 ## Leiningen
 1. `ln -s ~/.dotfiles/lein .lein`
 
-##  Vim
-2. ```ln -s ~/.dotfiles/vimrc ~/.vimrc```
-3. ```ln -s ~/.dotfiles/dotvim/ ~/.vim```
-4. ```cd ~/.dotfiles && git submodule init && git submodule update```
-
-(Note: after installation you will have to compile command-T)
-
-##### to update vim plugins
-```git submodule foreach git pull origin master```
-
-##### to add new vim bundle
-```git submodule add git@mygithost:billboard dotvim/bundle/```
-
-##### Vim colourschemes added
-* distinguished
-* grb256
-* solarized
-
-## Misc setup
-```
-ln -s ~/.dotfiles/ackrc .ackrc      # ack search
-ln -s ~/.dotfiles/aliases .aliases  # reusable aliases
-ln -s ~/.dotfiles/aprc .aprc        # pretty colours in ruby
-```
