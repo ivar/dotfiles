@@ -11,8 +11,6 @@
   frag = magenta bold
   old = red
   new = green
-[credential]
-	helper = osxkeychain
 [alias]
   # add
   a = add                           # add

@@ -7,4 +7,3 @@ alias wifiip="ipconfig getifaddr en1"
 alias ag='rg'
 alias gst='git status'
 
-alias sp='cd ~/Work/spark; git status'
